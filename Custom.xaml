@@ -1,0 +1,140 @@
+﻿<local:MyHint Text="戎家诺制作" />
+<!--图标-->
+<local:MyCard Title="PCL图标" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+        <StackPanel Margin="25,40,23,15">
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/CommandBlock.png"/>
+            <!-- 命令方块 -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/Cobblestone.png"/>
+            <!-- 圆石 -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/GoldBlock.png"/>
+            <!-- 金块 -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/Grass.png"/>
+            <!-- 草方块 -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/GrassPath.png"/>
+            <!-- 草径 -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/Anvil.png"/>
+            <!-- 铁砧（zhen） -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/RedstoneBlock.png"/>
+            <!-- 红石块 -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/RedstoneLampOn.png"/>
+            <!-- 红石灯（亮） -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/RedstoneLampOff.png"/>
+            <!-- 红石灯（灭） -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/Egg.png"/>
+            <!-- 鸡蛋 -->
+            <Image Width="50" Height="50" Margin="5,15,0,15" Source="pack://application:,,,/images/Blocks/Fabric.png"/>
+            <!-- 布料（Fabric 图标） -->
+        </StackPanel>
+    </local:MyCard>
+<!--网站快捷-->
+<local:MyCard Title="网站快捷区" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <Image Height="50" HorizontalAlignment="Center" Source="https://www.mcbbs.net/template/mcbbs/image/logo_sc.png" />
+
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="https://mcskin.cn/app/favicon.ico" Title="红石" Info="红石皮肤站"
+                          EventType="打开网页" EventData ="https://mcskin.cn/user" Type="Clickable" />
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="https://www.natfrp.com/favicon.ico" Title="樱花" Info="樱花映射"
+                          EventType="打开网页" EventData ="https://www.natfrp.com/user/" Type="Clickable" />
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="https://www.mcbbs.net/favicon.ico" Title="论坛" Info="我的世界中文论坛"
+                          EventType="打开网页" EventData ="https://www.mcbbs.net/" Type="Clickable" />
+    </StackPanel>
+</local:MyCard>
+<!--IKUN指令-->
+<local:MyCard Title="快捷指令" Margin="0,10,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+    <local:MyButton Width="350" Height="35" Padding="13,0,13,0"
+                    Text="快捷指令使用教程" EventType="弹出窗口" EventData="快捷指令使用教程|点击可以复制指令\n{命令方块}在聊天框使用\n{金块}在泳冲命令方块使用\n{红石块}在重复命令方块\n{红石灯（暗）}在连锁命令方块（以泳冲启动）使用\n{红石灯（亮）}在连锁命令方块（以重复启动）使用"/>
+    <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="注：大多数@a可改为玩家名"/>
+    <local:MyCard Title="友好指令" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+        <StackPanel Margin="25,40,23,15">
+        <local:MyHint Text="注：可能会失去好朋友" />
+        <!--聊天框指令-->
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="统统死亡" Info="把所有人噶了"
+                          EventType="复制文本" EventData ="/kill @a" Type="Clickable" />
+        <!--重复命令方块指令-->
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/RedstoneBlock.png" Title="苦力怕来啦" Info="在每个玩家头顶召唤亿只苦力怕"
+                          EventType="复制文本" EventData ="/execute as @a at @s run summon Creeper ~ ~2 ~" Type="Clickable" />
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/RedstoneBlock.png" Title="TNT来啦" Info="在每个玩家头顶召唤亿点TNT"
+                          EventType="复制文本" EventData ="/execute @a~ ~ ~ summon TNT" Type="Clickable" />
+        </StackPanel>
+    </local:MyCard>
+    <local:MyCard Title="实用指令" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+        <StackPanel Margin="25,40,23,15">
+        <!--聊天框指令-->
+         <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="出生点设置" Info="在你所在的位置设置出生点点"
+                          EventType="复制文本" EventData ="/setworldspawn" Type="Clickable" />
+         <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="全部成就" Info="给所有人全部成就"
+                          EventType="复制文本" EventData ="/achievement give @a" Type="Clickable" />
+         <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="死亡不掉落" Info="如果你噶了，身上的物品不会掉落"
+                          EventType="复制文本" EventData ="/gamerule keepinventory true" Type="Clickable" />
+         <local:MyCard Title="游戏模式" Margin="0,10,0,15" CanSwap="True" IsSwaped="True">
+                <StackPanel Margin="25,40,23,15">
+                <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="生存模式" Info="所有人都是生存模式"
+                          EventType="复制文本" EventData ="/gamemode 0 @a" Type="Clickable" />
+                <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="生存模式" Info="所有人都是创作模式"
+                          EventType="复制文本" EventData ="/gamemode 1 @a" Type="Clickable" />
+                <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="冒险模式" Info="所有人都是冒险模式"
+                          EventType="复制文本" EventData ="/gamemode 2 @a" Type="Clickable" />
+                <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/CommandBlock.png" Title="旁观者模式" Info="所有人都是旁观者模式"
+                          EventType="复制文本" EventData ="/gamemode 3 @a" Type="Clickable" />
+                </StackPanel>
+         </local:MyCard>
+        </StackPanel>
+    </local:MyCard>
+    </StackPanel>
+</local:MyCard>
+<!--杂物-->
+<local:MyCard Title=" ">
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <local:MyButton Margin="0,0,0,0" Width="225" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+               Text="刷新" EventType="刷新主页" ToolTip="刷新一下你的信息" />
+        <local:MyButton Margin="0,0,0,0" Width="200" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+               Text="打开日志" EventType="打开文件" EventData="Log1.txt" ToolTip="打开PCL的日志" />
+    </StackPanel>
+</local:MyCard>
+<!--快捷服务器操作-->
+<local:MyCard Title="快捷服务器操作" Margin="0,10,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+    <local:MyButton Width="350" Height="35" Padding="13,0,13,0"
+                    Text="快捷指令使用教程" EventType="弹出窗口" EventData="快捷服务器使用教程|点击可以进入\n{金块}不寻常版本\n{红石灯（暗）}Forge版服务器\n{红石灯（亮）}Fabric版服务器\n{命令方块}无Forge或Fabic版服务器"/>
+    <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="注：如果服务器没开则会进入你所选的版本"/>
+    <local:MyCard Title="好友联机" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+        <StackPanel Margin="25,40,23,15">
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/RedstoneLampOn.png" Title="Fabric进入联机" Info="启动1.19.2Fabric并进入王开令的联机"
+                          EventType="启动游戏" EventData ="1.19.2-Fabric|202.182.125.24" />
+        <local:MyListItem Margin="-5,15,-5,0"
+                          Logo="pack://application:,,,/images/Blocks/RedstoneLampOff.png" Title="Forge进入联机" Info="启动1.19.2Forge并进入王开令的联机"
+                          EventType="启动游戏" EventData ="1.19.2-Forge|202.182.125.24" />
+        </StackPanel>
+    </local:MyCard>
+    <local:MyCard Title="常用服务器" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+        <StackPanel Margin="25,40,23,15">
+        </StackPanel>
+    </local:MyCard>
+    </StackPanel>
+</local:MyCard>
+<!--告示-->
+<local:MyCard Title="告示">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4" Foreground="#CE0000"
+                   Text="戎家诺制作" />
+        <TextBlock Margin="0,0,0,4" Foreground="{DynamicResource ColorBrush5}"
+         Text="自豪的采用作者给的XAML文件" />
+    </StackPanel>
+</local:MyCard>
